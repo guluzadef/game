@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Qayci, Kagiz, dash oyunu</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h2>Oyun</h2>
+                <p id="gametext">Zehmet olmasa birini secin!</p>
+                <div class="row" id="elements">
+                    <div class="col-4">
+                        <button class="btn btn-success" onclick="game.action(this)">Qayci</button>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-success" onclick="game.action(this)">Dash</button>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-success" onclick="game.action(this)">Kagiz</button>
+                    </div>
+                </div>
+                <br>
+                <a href="#" class="btn btn-success start-button" style="display:none;" onclick="game.play_again()">Yeniden oyna</a>
+            </div>
+            <div class="col-6">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">Statistika</h3>
+                        <p class="card-text">Oyun sayi: <span id="game_count">0</span></p>
+                        <p class="card-text">Qelebe sayi: <span id="win_count">0</span></p>
+                        <p class="card-text">Meglubiyyet sayi: <span id="lose_count">0</span></p>
+                        <p class="card-text">Hec-hece sayi: <span id="equal_count">0</span></p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+
+</html>
